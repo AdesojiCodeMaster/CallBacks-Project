@@ -16,10 +16,19 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-let myMap = function() {
-
+let myMap = function(array, callback) {
+let newArr = [];
+ for(let i = 0; i < array.length; i++){
+    let el = array[i];
+    newArr.push(callback(el))
+ }
+return newArr;
 };
 
+
+function callback(el){
+ return Math.sqrt(el);
+}
 
 
 
