@@ -27,11 +27,24 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
-
+let exactly = function(array, num, callback) {
+    let newArr = [];
+for(let i = 0; i < array.length; i++){
+        let el = array[i]
+        if(callback(el) === true){
+            newArr.push(el)
+        }
+    }
+   if(newArr.length === num){
+    return true;
+   } else {return false;}
 };
 
-
+function isEven(el){
+    if(el % 2 === 0){
+        return true;
+    }
+}
 
 
 

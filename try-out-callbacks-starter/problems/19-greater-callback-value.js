@@ -18,7 +18,13 @@ console.log(greaterCallbackValue(1, doubler, squarer));     // 2
 console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
 *******************************************************************************/
 
-let greaterCallbackValue = function() {
+let greaterCallbackValue = function(value, callback1, callback2) {
+
+if(callback1(value) > callback2(value)){
+   return callback1(value);
+} else if(callback2(value) > callback1(value)){
+    return callback2(value)
+}
 
 };
 

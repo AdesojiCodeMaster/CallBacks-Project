@@ -22,10 +22,15 @@ let result3 = firstIndex(['canine', 'feline', 'tree'], function (s) {
 console.log(result3); // -1
 *******************************************************************************/
 
-let firstIndex = function() {
-
+let firstIndex = function(array, callback) {
+    for(let i = 0; i < array.length; i++){
+        let el = array[i]
+        if(callback(el)){
+            return i
+        }
+    }
+ return -1
 };
-
 
 
 

@@ -34,10 +34,15 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   optional initial accumulator
 *******************************************************************************/
 
-let mySimpleReduce = function() {
+let mySimpleReduce = function(array, callback) {
+    let sum = array[0];
+    for(let i = 1; i < array.length; i++){
+        let el = array[i]
+              sum = callback(sum, el)
 
+    }
+return sum
 };
-
 
 
 

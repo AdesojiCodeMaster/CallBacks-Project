@@ -26,13 +26,5 @@ return newArr;
 };
 
 
-function callback(el){
- return Math.sqrt(el);
-}
-
-
-
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myMap;

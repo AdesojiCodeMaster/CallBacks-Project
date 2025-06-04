@@ -28,13 +28,6 @@ let myForEach = function(array, callback) {
       }
 };
 
-/*
-function callback(el, i, array){
- console.log(`${el} is at index ${i}`)
-}*/
 
-function callback(el, i, array){
-    return test.push(el.toUpperCase());
-   }
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myForEach;

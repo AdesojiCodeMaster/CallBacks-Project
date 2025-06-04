@@ -2,7 +2,7 @@
 Write a function `andSelect` that accepts an array and two callbacks. The function
 should return a new array containing elements of the original array that result in
 true when passed into both callbacks.
-
+/*
 Examples:
 
 let isEven = function (n) {
@@ -28,8 +28,15 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 
 *******************************************************************************/
 
-let andSelect = function() {
-
+let andSelect = function(array, callback1, callback2){
+    let newArr = [];
+    for(let i = 0; i < array.length; i++){
+        let el = array[i]
+        if((callback1(el) === true) && (callback2(el) === true) ){
+            newArr.push(el);
+        }
+    }
+ return newArr;
 };
 
 

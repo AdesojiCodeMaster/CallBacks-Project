@@ -1,5 +1,5 @@
 /*******************************************************************************
-Write a function `xorSelect` that accepts an array and two callback as arguments.
+Write a function `xorSelect` that accepts an array and two callbacks as arguments.
 The function should return a new array containing elements of the original array
 that result in true when passed in one of the callbacks, but not both.
 
@@ -31,11 +31,18 @@ console.log(
 // [ 'art', 'app', 'buttery' ]
 *******************************************************************************/
 
-let xorSelect = function() {
-
+let xorSelect = function(array, callback1, callback2) {
+     let newArr = [];
+  for(let i = 0; i < array.length; i++){
+    let el = array[i]
+if(callback1(el) && !callback2(el)){
+       newArr.push(el)
+} else if (!callback1(el) && callback2(el)){
+newArr.push(el)
+}
+  }
+return newArr;
 };
-
-
 
 
 
